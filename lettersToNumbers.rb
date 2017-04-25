@@ -1,7 +1,7 @@
 puts "Please type a sentence and press enter..."
 input = gets.chomp
 
-puts "\n" + "This is your sentence covnerted into numbers: \n"
+puts "\nThis is your sentence covnerted into numbers: \n"
 
 inputToInt = ""
 inputLoopCounter = 0
