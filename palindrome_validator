@@ -4,14 +4,15 @@ input = gets.chomp #input from console
 #input = "racefastsafecar" #testcase with odd number of characters
 #input = "" #testcase with even number of characters
 
-inputUpper = input.upcase
-
 isPalindrome = false
-
 validator = Array.new
 
+characterValidation = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 input.each_char do |i|
+  if characterValidation.include? i.upcase
   validator << i.upcase
+  end
 end
 
 palindromeScore = 0
@@ -26,7 +27,7 @@ validator.each_index do |i|
   end
 end
 
-if palindromeScore == input.length
+if palindromeScore == validator.length
   isPalindrome = true
 end
 
