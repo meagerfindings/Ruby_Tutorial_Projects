@@ -15,5 +15,5 @@ while i < iterationNumberInput do
   i += 1
 end
 
-puts "\nFibbonacci nubmer: "
+puts "\nFibbonacci number: "
 puts fibNum
