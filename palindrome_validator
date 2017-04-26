@@ -1,0 +1,37 @@
+puts "\nPlease type in a palindrome and press enter: \n"
+
+input = gets.chomp #input from console
+#input = "racefastsafecar" #testcase with odd number of characters
+#input = "" #testcase with even number of characters
+
+inputUpper = input.upcase
+
+isPalindrome = false
+
+validator = Array.new
+
+input.each_char do |i|
+  validator << i.upcase
+end
+
+palindromeScore = 0
+
+#Take each entry and compare it to the entry at the inverse place based on index.
+validator.each_index do |i|
+  if validator[i] == validator[validator.length - i - 1] #Added -1 as the array entry i will be 1 number lower than the array length - i
+    palindromeScore = palindromeScore + 1
+    #puts validator[i] + " validated."
+  else
+    break
+  end
+end
+
+if palindromeScore == input.length
+  isPalindrome = true
+end
+
+if isPalindrome == true
+  puts "\n" + input + " is a palindrome!"
+else
+  puts "\n" + input + " is not a palindrome."
+end
